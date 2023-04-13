@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styles } from "../../assets/styles/styles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { menuNavbar } from "../../constants";
@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link to={`/`} className="flex items-center gap-2">
             <p className="text-white text-2xl font-bold cursor-pointer flex">
-              <span className="sm:block hidden">Portfolio</span>
+              <span className="sm:block hidden">My Portfolio</span>
             </p>
           </Link>
 
@@ -53,9 +53,9 @@ export default function Navbar() {
                 key={nav.id}
                 className={`${
                   location.pathname === nav.path
-                    ? "text-white"
+                    ? "text-white before:origin-left before:scale-x-100 relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0"
                     : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                } hover:text-white text-[18px] font-medium cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0`}
                 onClick={() => activeMenu(nav)}
               >
                 {nav.title}
@@ -81,9 +81,9 @@ export default function Navbar() {
                     key={nav.id}
                     className={`${
                       location.pathname === nav.path
-                        ? "text-white"
+                        ? "text-white before:origin-left before:scale-x-100 relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0"
                         : "text-secondary"
-                    } hover:text-white text-[18px] font-medium cursor-pointer`}
+                    } hover:text-white text-[18px] font-medium cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0`}
                     onClick={() => {
                       activeMenu(nav);
                       setToggle(!toggle);

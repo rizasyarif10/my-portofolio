@@ -12,7 +12,9 @@ export default function HomePage() {
         <Header background={`bg-home`}>
           <ContentHeader
             title={`Mochamad Riza Syarif`}
-            subtitle={`Software Engineer`}
+            subtitle={`Frontend Developer`}
+            paragraph = {'pengalaman di bidang web application'}
+            type={'home'}
           />
         </Header>
       </BaseLayout>

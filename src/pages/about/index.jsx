@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Meta title={`About`} />
       <Header background={`bg-about`}>
         <ContentHeader
-          title={`About`}
+          title={`About Me`}
           subtitle={`Tentang Saya`}
         />
       </Header>
