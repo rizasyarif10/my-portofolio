@@ -1,36 +1,76 @@
 import React from "react";
 import { styles } from "../../assets/styles/styles";
+import { Avatar, Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
+import { profile } from "../../assets/image";
+import MediaSocial from "../mediasocial";
 
-export default function ContentHeader({ title, subtitle, paragraph, type }) {
+export default function ContentHeader({
+  title,
+  subtitle,
+  paragraph,
+  type,
+  titleButton1,
+  titlebutton2,
+  handlebutton1,
+  handlebutton2,
+}) {
   return (
     <div className={`relative w-full h-screen mx-auto`}>
-      <div className={`flex justify-center items-center h-screen`}>
+      <div
+        className={`flex justify-center items-center h-screen ${
+          type === "contact" || type === "about" ? "backdrop-brightness-50" : ""
+        }`}
+      >
         <div className="m-auto text-center">
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          {type === "home" && (
+            <Avatar
+              className="custom-position"
+              shape="circle"
+              size={{ xs: 100, sm: 100, md: 100, lg: 155, xl: 155, xxl: 155 }}
+              src={`${profile}`}
+              alt="avatar"
+            />
+          )}
+
+          <h2 className={`${styles.heroHeadText} text-white`}>
             <span className="text-white">{title}</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          </h2>
+          <h3 className={`${styles.heroSubText} mt-2 text-white-100`}>
             {subtitle}
-          </p>
+          </h3>
           <p className={`${styles.paragrapghText} mt-1 text-white-100`}>
             {paragraph}
           </p>
           {type === "home" ? (
-            <div className="flex justify-between items-center mt-5">
-              <div className="m-auto text-center">
-                <button className="mr-3 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                  Contact Me
-                </button>
-                <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                  <svg
-                    class="fill-current w-4 h-4 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-                  </svg>
-                  <span>Download CV</span>
-                </button>
+            <div className="mt-5">
+              <MediaSocial />
+              <div className="flex justify-between items-center mt-5 flex-col">
+                <div className="mx-auto text-center">
+                  {titleButton1 && (
+                    <Button
+                      type=""
+                      shape="round"
+                      className="mr-3 px-6 bg-transparent hover:bg-[#26abbd] text-white font-semibold hover:text-white border 
+                    border-[#fff] hover:border-transparent inline-flex items-center "
+                      onClick={handlebutton1}
+                    >
+                      {titleButton1}
+                    </Button>
+                  )}
+                  {titlebutton2 && (
+                    <Button
+                      type=""
+                      shape="round"
+                      icon={<DownloadOutlined />}
+                      className=" bg-gray-300 hover:bg-gray-400 text-gray font-semibold
+                    inline-flex items-center px-4"
+                      onClick={handlebutton2}
+                    >
+                      {titlebutton2}
+                    </Button>
+                  )}
+                </div>
               </div>
             </div>
           ) : (
