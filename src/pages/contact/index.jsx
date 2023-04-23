@@ -1,19 +1,15 @@
 import React from "react";
 import BaseLayout from "../../components/layout/baseLayout";
-import Meta from "../../utils/meta";
 import Header from "../../components/header/header";
 import ContentHeader from "../../components/header/contentHeader";
+import Meta from "../../utils/meta";
 
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <BaseLayout>
-      <Meta title={`About`} />
-      <Header background={`bg-about`}>
-        <ContentHeader
-          title={`About Me`}
-          subtitle={`Tentang Saya`}
-          type={'about'}
-        />
+      <Meta title={`Contact`} />
+      <Header background={`bg-contact`}>
+        <ContentHeader title={`Contact Me`} subtitle={`Kontak Saya`} type={'contact'}/>
       </Header>
     </BaseLayout>
   );

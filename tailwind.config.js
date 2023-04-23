@@ -4,6 +4,11 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      opacity: {
+        10: "0.1",
+        20: "0.2",
+        95: "0.95",
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
@@ -19,8 +24,9 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "home": "url('/src/assets/image/background/home.jpg')",
-        "about": "url('/src/assets/image/background/about.jpg')",
+        home: "url('/src/assets/image/background/home.jpg')",
+        about: "url('/src/assets/image/background/about.jpg')",
+        contact: "url('/src/assets/image/background/contact.jpg')",
       },
     },
   },

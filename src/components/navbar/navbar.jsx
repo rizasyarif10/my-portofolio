@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styles } from "../../assets/styles/styles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { menuNavbar } from "../../constants";
@@ -53,9 +53,9 @@ export default function Navbar() {
                 key={nav.id}
                 className={`${
                   location.pathname === nav.path
-                    ? "text-white"
+                    ? "text-white before:origin-left before:scale-x-100 relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0"
                     : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                } hover:text-white text-[18px] font-medium cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0`}
                 onClick={() => activeMenu(nav)}
               >
                 {nav.title}
@@ -67,7 +67,7 @@ export default function Navbar() {
             <img
               alt="menu"
               src={toggle ? close : menu}
-              className="w-[28px] h-[28px] object-contain"
+              className="w-[20px] h-[20px] object-contain"
               onClick={handleMenu}
             />
             <div
@@ -81,9 +81,9 @@ export default function Navbar() {
                     key={nav.id}
                     className={`${
                       location.pathname === nav.path
-                        ? "text-white"
+                        ? "text-white before:origin-left before:scale-x-100 relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0"
                         : "text-secondary"
-                    } hover:text-white text-[18px] font-medium cursor-pointer`}
+                    } hover:text-white text-[18px] font-medium cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-white before:absolute before:left-0 before:bottom-0`}
                     onClick={() => {
                       activeMenu(nav);
                       setToggle(!toggle);
