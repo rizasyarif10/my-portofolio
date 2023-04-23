@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link to={`/`} className="flex items-center gap-2">
             <p className="text-white text-2xl font-bold cursor-pointer flex">
-              <span className="sm:block hidden">My Portfolio</span>
+              <span className="sm:block hidden">Portfolio</span>
             </p>
           </Link>
 
@@ -67,7 +67,7 @@ export default function Navbar() {
             <img
               alt="menu"
               src={toggle ? close : menu}
-              className="w-[28px] h-[28px] object-contain"
+              className="w-[20px] h-[20px] object-contain"
               onClick={handleMenu}
             />
             <div

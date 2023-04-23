@@ -7,7 +7,7 @@ import Meta from "../../utils/meta";
 export default function ContactPage() {
   return (
     <BaseLayout>
-      <Meta title={`About`} />
+      <Meta title={`Contact`} />
       <Header background={`bg-contact`}>
         <ContentHeader title={`Contact Me`} subtitle={`Kontak Saya`} type={'contact'}/>
       </Header>

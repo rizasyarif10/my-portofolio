@@ -48,7 +48,7 @@ export default function HomePage() {
           }
           paragraph={"pengalaman di bidang web application"}
           type={"home"}
-          titleButton1={"Contact Me"}
+          titleButton1={"Contact"}
           titlebutton2={"Download CV"}
           handlebutton1={handleContactMe}
           handlebutton2={handleDownloadCV}
