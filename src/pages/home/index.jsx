@@ -46,7 +46,7 @@ export default function HomePage() {
               ]}
             />
           }
-          paragraph={"pengalaman di bidang web application"}
+          paragraph={"pengalaman di bidang web application "}
           type={"home"}
           titleButton1={"Contact"}
           titlebutton2={"Download CV"}
