@@ -34,7 +34,7 @@ export default function HomePage() {
           subtitle={`rizasyarif20@gmail.com`}
           type={"home"}
           titleButton1={"Contact"}
-          titlebutton2={"Download CV"}
+          titlebutton2={"Download CV "}
           handlebutton1={handleContactMe}
           handlebutton2={handleDownloadCV}
         />
