@@ -11,7 +11,8 @@ export default function AboutPage() {
       <Header background={`bg-about`}>
         <ContentHeader
           title={`About Me`}
-          subtitle={`Tentang Saya`}
+          subtitle={``}
+          paragraph={"I build things for the web application and user interfaces"}
           type={'about'}
         />
       </Header>

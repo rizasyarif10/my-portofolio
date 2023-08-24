@@ -34,7 +34,7 @@ export default function ContentHeader({
               <Avatar
                 className="custom-position"
                 shape="circle"
-                size={{ xs: 100, sm: 100, md: 100, lg: 155, xl: 155, xxl: 155 }}
+                size={155}
                 src={`${profile}`}
                 alt="avatar"
               />
@@ -46,19 +46,50 @@ export default function ContentHeader({
               animationInDuration={1500}
               isVisible={true}
             >
-              <h2 className={`${styles.heroHeadText} text-white`}>
+              <h2 className={`${styles.heroHeadText} mt-2 text-white-100 uppercase`}>
                 <span className="text-white">{title}</span>
               </h2>
               <h3 className={`${styles.heroSubText} mt-2 text-white-100`}>
                 {subtitle}
               </h3>
-              <p className={`${styles.paragrapghText} mt-1 text-white-100`}>
+              <p className={`${styles.paragrapghText} mt-2 text-white-100 capitalize`}>
                 {paragraph}
               </p>
             </Animated>
+          ) : type === "about" ? (
+            <>
+              <Animated
+                animationIn="slideInDown"
+                animationInDuration={1500}
+                isVisible={true}
+              >
+                <h2 className={`${styles.heroHeadText} text-white-100 uppercase`}>
+                  <span className="text-white">{title}</span>
+                </h2>
+              </Animated>
+              <Animated
+                animationIn="slideInLeft"
+                animationInDuration={1500}
+                isVisible={true}
+              >
+                <h3 className={`${styles.heroSubText} mt-2 text-white-100`}>
+                  {subtitle}
+                </h3>
+              </Animated>
+
+              <Animated
+                animationIn="slideInUp"
+                animationInDuration={1500}
+                isVisible={true}
+              >
+                <p className={`${styles.paragrapghText} mt-2 text-white-100`}>
+                  {paragraph}
+                </p>
+              </Animated>
+            </>
           ) : (
             <>
-              <h2 className={`${styles.heroHeadText} text-white`}>
+              <h2 className={`${styles.heroHeadText} text-white-100 uppercase`}>
                 <span className="text-white">{title}</span>
               </h2>
               <h3 className={`${styles.heroSubText} mt-2 text-white-100`}>

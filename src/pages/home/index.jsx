@@ -5,7 +5,7 @@ import ContentHeader from "../../components/header/contentHeader";
 import Meta from "../../utils/meta";
 import CV from "../../assets/document/pdf/cv.pdf";
 import { useNavigate } from "react-router-dom";
-import Typical from "react-typical";
+import { SectionAbout } from "../../components/app/home";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ export default function HomePage() {
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "Curiculume vitae.pdf";
+        alink.download = "CV Mochamad Riza Syarif.pdf";
         alink.click();
       });
     });
@@ -31,22 +31,7 @@ export default function HomePage() {
       <Header background={`bg-home`}>
         <ContentHeader
           title={`Mochamad Riza Syarif`}
-          subtitle={
-            <Typical
-              loop={Infinity}
-              steps={[
-                "Frontend Developer",
-                2000,
-                "Java Script",
-                2000,
-                "React JS",
-                2000,
-                "Next JS",
-                2000,
-              ]}
-            />
-          }
-          paragraph={"pengalaman di bidang web application "}
+          subtitle={`rizasyarif20@gmail.com`}
           type={"home"}
           titleButton1={"Contact"}
           titlebutton2={"Download CV"}
@@ -54,6 +39,7 @@ export default function HomePage() {
           handlebutton2={handleDownloadCV}
         />
       </Header>
+      <SectionAbout />
     </BaseLayout>
   );
 }

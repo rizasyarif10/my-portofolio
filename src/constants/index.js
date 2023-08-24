@@ -1,5 +1,6 @@
 import { menuNavbar } from "./menu/servicesmenu";
-import {mediaSocial} from "./mediasocial/servicesmediasocial"
+import {mediaSocial} from "./mediasocial/servicesmediasocial";
+import { servicesAbout } from "./about/servicesabout";
 
 
-export {menuNavbar, mediaSocial};
+export {menuNavbar, mediaSocial, servicesAbout};
